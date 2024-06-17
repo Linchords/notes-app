@@ -219,11 +219,47 @@ h1::after {
         left: 1px;
         font-size: 25px;
     }
+
+    @keyframes tilt {
+        0% {
+            transform: rotate(0deg)
+        }
+        25% {
+            transform: rotate(-8deg)
+        }
+        50% {
+            transform: rotate(5deg);
+        }
+        75% {
+            transform: rotate(-8deg);
+        }
+        100% {
+            transform: rotate(0deg);
+        }
+    }
+    
+    .tilt-button {
+        display: inline-block;
+        cursor: pointer;
+        transition: 0.5s ease-in-out;
+    }
+    
+    .tilt-button:active {
+        animation: tilt 0.8s ease-in-out;
+    }
+    
+    .house:hover {
+        animation: tilt 0.8s ease-in-out;
+    }
+    
+    .home-icon:hover {
+        animation: tilt 0.8s ease-in-out;
+    }
 }
 
 
 @media (min-width: 601px) {
-    
+
 }
 
 
